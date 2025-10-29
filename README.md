@@ -1,3 +1,7 @@
-SupportHub — Estrutura inicial (placeholders)
+SupportHub — Estrutura inicial
 
-Descrição curta e instruções de como começar (arquivo placeholder).
+Esse repositório contém a estrutura base do projeto SupportHub.
+Arquivos criados como esqueleto: backend (Express/Sequelize), frontend estático e scripts DB.
+Instruções:
+- Copie .env.example para .env e ajuste as variáveis.
+- No backend: npm install, depois npm run dev (se houver script)

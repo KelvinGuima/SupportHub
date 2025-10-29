@@ -1,1 +1,2 @@
--- placeholder: seeds.sql
+-- Seeds (placeholder)
+-- Inserir seeds reais quando for necessário; aqui há exemplos comentados.
