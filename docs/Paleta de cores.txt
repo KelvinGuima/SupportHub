@@ -1,0 +1,14 @@
+| Função                   | Cor               | Hex               |         
+| ------------------------ | ----------------- | ----------------- | 
+| Primária (principal)     | Azul médio        | #2563EB         | 
+| Primária (hover)         | Azul escuro       | #1E40AF         | 
+| Secundária               | Laranja suave     | #F97316         | 
+| Sucesso                  | Verde             | #22C55E         | 
+| Aviso / Erro             | Vermelho          | #DC2626         | 
+| Fundo (principal)        | Cinza muito claro | #F3F4F6         | 
+| Fundo (cards/menu)       | Branco            | #FFFFFF         | 
+| Texto primário           | Cinza escuro      | #111827         |  
+| Texto secundário         | Cinza médio       | #6B7280         | 
+| Bordas / linhas          | Cinza claro       | #E5E7EB         |
+| Fundo do header/sidebar  | Azul marinho      | #1E3A8A         |                       
+| Fundo do modal (overlay) | Preto translúcido | rgba(0,0,0,0.5) |           
