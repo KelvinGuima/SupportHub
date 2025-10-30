@@ -1,6 +1,6 @@
-import pool from "../config/db"
-import { comparePassword } from "../utils/hashPassword"
-import { generateToken } from "../utils/jwtUtils"
+import pool from "../config/db.js"
+import { comparePassword } from "../utils/hashPassword.js"
+import { generateToken } from "../utils/jwtUtils.js"
 
 export const login = async (req, res) => {
     const { email, senha } = req.body;
@@ -11,7 +11,7 @@ export const login = async (req, res) => {
 
     try {
         const [rows] = await pool.query("SELECT * FROM usuarios WHERE email = ?", [email]);
-        if (rows.lenght.equals(0)) {
+        if (rows.lenght === 0) {
             return res.status(401).json({ message: "Usuário não encontrado" });
         }
 

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/chamadoController');
+const controller = require('../controllers/chamadoController.js');
 
 router.get('/', controller.list);
 router.get('/:id', controller.get);
