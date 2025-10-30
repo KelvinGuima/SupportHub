@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 /* Estilos base (placeholder) */
 :root {
   /* Cores principais */
@@ -18,4 +19,10 @@
   --header-bg: #1E3A8A;
   --overlay: rgba(0, 0, 0, 0.5);
 }
-body { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--text); }
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--background);
+  color: var(--text-primary);
+}
