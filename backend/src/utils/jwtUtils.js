@@ -1,11 +1,16 @@
-const jwt = require('jsonwebtoken');
+import jwt from "jsonwebtoken"
 
-function sign(payload) {
-  return jwt.sign(payload, process.env.JWT_SECRET || 'secret', { expiresIn: '8h' });
+const JWT_SECRET = process.env.JWT_SECRET || "senha_aleatoria"
+
+export const generateToken = (user) => {
+  return jwt.sign(
+    {
+      id: user.id,
+      nome: user.nome,
+      email: user.email,
+      perfil: user.perfil,
+    },
+    JWT_SECRET,
+    { expiresIn: "2h" }
+  );
 }
-
-function verify(token) {
-  return jwt.verify(token, process.env.JWT_SECRET || 'secret');
-}
-
-module.exports = { sign, verify };

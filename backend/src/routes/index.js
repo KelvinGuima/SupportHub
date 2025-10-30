@@ -1,14 +1,16 @@
-const express = require('express');
+import express from "express";
+import usuarioRoutes, { route } from "./usuarioRoutes"
+import chamadoRoutes from "./chamadoRoutes"
+import respostasRoutes from "./respostaRoutes"
+import categoriaRoutes from "./categoriaRoutes"
+import authRoutes from "./authRoutes"
+
 const router = express.Router();
 
-const usuarioRoutes = require('./usuarioRoutes');
-const chamadoRoutes = require('./chamadoRoutes');
-const respostaRoutes = require('./respostaRoutes');
-const categoriaRoutes = require('./categoriaRoutes');
+router.use("/auth", authRoutes);
+router.use("/usuarios", usuarioRoutes);
+router.use("/chamados", chamadoRoutes);
+router.use("/respostas", respostasRoutes);
+router.use("/categorias", categoriaRoutes);
 
-router.use('/usuarios', usuarioRoutes);
-router.use('/chamados', chamadoRoutes);
-router.use('/respostas', respostaRoutes);
-router.use('/categorias', categoriaRoutes);
-
-module.exports = router;
+export default router;
