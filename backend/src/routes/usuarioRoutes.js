@@ -1,11 +1,28 @@
-const express = require('express');
+import express from "express";
+import {
+  criarUsuario,
+  listarUsuarios,
+  obterUsuarioPorId,
+  atualizarUsuario,
+  deletarUsuario,
+  atualizarSenha
+} from "../controllers/usuarioController.js";
+
+import { authMiddleware } from "../middlewares/authMiddleware.js";
+import { roleMiddleware } from "../middlewares/roleMiddleware.js";
+
 const router = express.Router();
-const controller = require('../controllers/usuarioController');
 
-router.get('/', controller.list);
-router.get('/:id', controller.get);
-router.post('/', controller.create);
-router.put('/:id', controller.update);
-router.delete('/:id', controller.remove);
+router.post("/", authMiddleware, roleMiddleware(["adm"]), criarUsuario);
 
-module.exports = router;
+router.get("/", authMiddleware, roleMiddleware(["adm"]), listarUsuarios);
+
+router.get("/:id", authMiddleware, obterUsuarioPorId);
+
+router.put("/:id", authMiddleware, atualizarUsuario);
+
+router.delete("/:id", authMiddleware, roleMiddleware(["adm"]), deletarUsuario);
+
+router.put("/alterar-senha/me", authMiddleware, atualizarSenha);
+
+export default router;
