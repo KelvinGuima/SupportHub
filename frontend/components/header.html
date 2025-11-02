@@ -1,4 +1,120 @@
-<!-- header (placeholder) -->
-<header>
-  <h1>SupportHub</h1>
-</header>
+<div id="header-container">
+  <header class="header">
+    <div class="header-left">
+      <img src="../assets/img/logo_nameless.png" alt="SupportHub Logo" class="logo" />
+      <h1 class="brand">SupportHub</h1>
+    </div>
+
+    <div class="header-right">
+      <span id="user-name" class="user-name">Usuário</span>
+      <div class="profile-container">
+        <img src="../assets/img/user.png" alt="Perfil" class="profile-icon" id="profile-icon" />
+        <div class="dropdown-menu" id="dropdown-menu">
+          <button id="logout-btn">Sair</button>
+        </div>
+      </div>
+    </div>
+  </header>
+</div>
+
+<style>
+.header {
+  background: linear-gradient(to right, #ffffff 0%, #E0E7FF 40%, #1E3A8A 100%);
+  color: #1E3A8A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  height: 10vh;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease-in-out;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 8vh;
+  width: auto;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1E3A8A;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #F3F4F6;
+  text-transform: capitalize;
+}
+
+.profile-container {
+  position: relative;
+}
+
+.profile-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  padding: 4px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.profile-icon:hover {
+  transform: scale(1.05);
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  right: 0;
+  top: 50px; 
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 100;
+  min-width: 120px;
+  text-align: right;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown-menu button {
+  background: none;
+  border: none;
+  color: #1E3A8A;
+  font-weight: 600;
+  width: 100%;
+  text-align: right;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.dropdown-menu button:hover {
+  background-color: #E0E7FF;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<script src="../assets/js/main.js"></script>
